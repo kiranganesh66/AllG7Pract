@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Book's Web</h1>
+
+    <h3>Few Important Links</h3>
+    <ul>
+        <li><a href="https://thelostepic.com">Link#1</a></li>
+        <li><a href="https://vivek.vnc.in">Link#2</a></li>
+        <li><a href="https://youtube.com/@vivek.epic.echoes">Link#3</a></li>
+        <li><a href="https://vivek.vnc.in/m">Link#4</a></li>
+        <li><a href="https://vivek.vnc.in/manas">Link#4</a></li>
+    </ul>
+
+    <button onclick="app.handleCopyLinks();">Copy Links</button>
+    <button onclick="app.handleReplaceLinks();">Replace Link Texts</button>
+    <button onclick="app.handleDecorateLinks();">Decorate Links</button>
+
+    <fieldset>
+        <legend>Link Addresses</legend>
+        <div id="links">
+
+        </div>
+    </fieldset>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        var app = (function () {
+
+
+            var links = $("#links");
+
+
+            //document on load function
+
+
+
+
+            return {
+                handleCopyLinks() {
+                    $("a").each(function () {
+                        var a = $(this);
+                        var href = a.attr("href");
+                        links.append(`<p>${href}</p>`);
+                    });
+                },
+                handleReplaceLinks() {
+                    $("a").each(function () {
+                        var a = $(this);
+                        var href = a.attr("href");
+                        a.html(href);
+                    });
+                },
+                handleDecorateLinks() {
+                    console.log('decorate links');
+
+                    $("li:nth-child(odd) a").css("background", "yellow");
+
+                    $("li a").eq(2).css({
+                        background: 'lightgreen'
+                    });
+
+                }
+            }
+
+        })();
+
+
+    </script>
+</body>
+
+</html>
