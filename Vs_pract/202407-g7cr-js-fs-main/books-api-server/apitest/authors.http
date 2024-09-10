@@ -1,0 +1,57 @@
+### get all authors
+GET http://localhost:9000/api/authors
+
+
+### CREATE A NEW AUTHO   
+POST http://localhost:9000/api/authors
+Content-Type: application/json 
+
+
+{
+  "name": "Dan_Kiran",
+  "id": "dan-Kiran",
+  "photo": "https://en.wikipedia.org/wiki/Dan_Brown#/media/File:Dan_Brown_bookjacket_cropped.jpg",
+  "biography": "Daniel Gerhard Brown (born June 22, 1964) is an American author best known for his thriller novels, including the Robert Langdon novels Angels & Demons (2000), The Da Vinci Code (2003), The Lost Symbol (2009), Inferno (2013), and Origin (2017). His novels are treasure hunts which usually take place over a period of 24 hours.[3] They feature recurring themes of cryptography, art, and conspiracy theories. His books have been translated into 57 languages and, as of 2012, have sold over 200 million copies. Three of them, Angels & Demons, The Da Vinci Code, and Inferno, have been adapted into films.",
+  "tags": [
+    "fiction",
+    "symbols",
+    "thriller",
+    "mythology"
+  ],
+  "__v": 10
+  
+}
+
+### get author vivek-dutta-mishra    /wrking
+GET http://localhost:9000/api/authors/dan-Kiran
+
+
+### get author with invalid id  wrking
+GET http://localhost:9000/api/authors/invalid-id
+
+
+### update author vivek-dutta-mishra  adding in extra   wrking
+PUT http://localhost:9000/api/authors/dan-Ganesh
+Content-Type: application/json 
+
+{
+
+  "name": "Kiran_Dan",
+  "id": "dan-G",
+  "photo": "https://en.wikipmpedia.org/wiki/Dan_Brown#/media/File:Dan_Brown_bookjacket_cropped.jpg",
+  "biography": "Kiran Gerhard Brown (born June 22, 1964) is an American author best known for his thriller novels, including the Robert Langdon novels Angels & Demons (2000), The Da Vinci Code (2003), The Lost Symbol (2009), Inferno (2013), and Origin (2017). His novels are treasure hunts which usually take place over a period of 24 hours.[3] They feature recurring themes of cryptography, art, and conspiracy theories. His books have been translated into 57 languages and, as of 2012, have sold over 200 million copies. Three of them, Angels & Demons, The Da Vinci Code, and Inferno, have been adapted into films."
+  
+}
+
+
+### DLETE author vivek-dutta-mishra not deleteing wrking
+DELETE  http://localhost:9000/api/authors/dan-Kiran
+
+
+### get books by author vivek-dutta-mishra  wrking
+GET http://localhost:9000/api/authors/vivek-dutta-mishra/books
+
+
+
+
+

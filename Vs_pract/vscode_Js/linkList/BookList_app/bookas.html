@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Manager</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body  >
+    <div class="container">
+        <header>
+            <h1>Books</h1>
+        </header>
+
+        <div class="search-container">
+            <h4>Search for Book</h4>
+            <input type="text" id="searchTitle" placeholder="Enter book title">
+            <button onclick="searchBook()">Search</button>
+        </div>
+
+        <div class="form-container">
+            
+            <form id="bookForm">
+                <label for="bookId">Book ID (for update/remove):</label>
+                <input type="number" id="bookId" placeholder="Book Id">
+
+                <label for="bookTitle">Title:</label>
+                <input type="text" id="bookTitle" placeholder="Book Title">
+
+                <label for="bookAuthor">Author:</label>
+                <input type="text" id="bookAuthor" placeholder="Author Name">
+
+                <label for="bookPrice">Price:</label>
+                <input type="number" id="bookPrice" placeholder="Price">
+
+                <label for="bookRating">Rating:</label>
+                <input type="number" step="0.1" id="bookRating" placeholder="Rating">
+
+                <label for="bookCoverUrl">Cover URL:</label>
+                <input type="text" id="bookCoverUrl" placeholder="Cover Image URL">
+
+                <button type="button" onclick="addOrUpdateBook()">Add/Update Book</button>
+                <button type="button" onclick="removeBook()">Remove Book</button>
+            </form>
+        </div>
+
+        <ul class="book-details" id="bookDetails">
+                 
+        </ul>
+    </div>
+
+    <script src="out.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Main_headng">JQuery Tutorial</h1>
+    <button id="togglbtn" onclick="fadeAllOnce()">Toggle All</button>
+
+    <ul >
+
+        <li uniqToggle="Selectors">Selectors</li>
+        <li uniqToggle="Actions">Actions</li>
+        <li uniqToggle="Introduction">Introduction</li>
+        <li uniqToggle="Important Elements">Important Elements</li>
+        
+    </ul>
+
+
+    <h2 id="headng1-2" class="useForTogle_El blue  ">Introduction</h2>
+    <p>Jquery is  a javascript library for dom manipulation</p>
+
+    <h2 class="Important Elements">Important Elements</h2>
+    <ul>
+        <li>Selector</li>
+        <li>Actions</li>
+        <li>Utility</li>
+    </ul>
+
+    <h2 id="Selectors" >Selectors</h2>
+    <p>jQuery selectors helps us select multiple items mathcing the selection
+        <ul>
+            <li>Element Selector</li>
+            <li>Class Selector</li>
+            <li>ID Selector</li>
+            <li>Attribute Selector</li>
+            <li>Child Selector</li>
+            <li>Parent Selector</li>
+            <li>Sibling Selector</li>
+            <li>Group Selector</li>
+            <li>Universal Selector</li>
+            <li>Form Selector</li>
+            <li>CSS3 Pseudo-class Selector</li>
+            <li>jQuery Object Selector</li>
+        </ul>
+    </p>
+
+    <h2 id="Actions">Actions</h2>
+    <p>jQuery selectors helps us select multiple items mathcing the selection   
+        <ul>
+            <li>hide()</li>
+            <li>show()</li>
+        </ul>
+
+    </p>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+
+<script>
+    $("[uniqToggle]").each(function(){
+
+        $(this).click(function(){
+ 
+             var id= $(this).attr("uniqToggle")
+   
+        $(`#${id}`).fadeToggle()
+
+        })
+     
+        // var attrb = $(this).attr("class")
+        // var value = $(this).text()
+        //  console.log(attrb)
+        //  console.log(value)
+
+
+    })
+
+    
+
+// $("#Selector_id").css("cursor","pointer")
+// $("#Selector_id").click(function(){
+  
+//     $("#headng1-3").nextUntil("h2").filter("ul,p").fadeToggle(500)
+
+// })
+
+// $("#Action_id").css("cursor","pointer")
+// $("#Action_id").click(function(){
+  
+//     $("#headng1-4").nextUntil("h2").filter("ul,p,li").fadeToggle(500)
+
+// })
+
+// $("#Introduction_id").css("cursor","pointer")
+// $("#Introduction_id").click(function(){
+  
+//     $("#headng1-2").nextUntil("h2").filter("ul,p,li").fadeToggle(500)
+
+// })
+
+
+$(document).ready(function(){
+     $('#togglbtn').click(function(){
+        $('ul,p').fadeToggle(500);
+     });
+
+
+$("#Main_headng").click(function(){
+    $("ul ,p,h2,li").fadeToggle(500)
+});
+
+let color= true
+
+
+$(".useForTogle_El").click(function(){
+
+
+    
+    $(this).css({"color":"red"})
+    
+    $(this).nextUntil("h2").filter("ul,p").fadeToggle(500)
+    
+    
+});
+
+$(".useForTogle_El").css("cursor","pointer")
+
+ });
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

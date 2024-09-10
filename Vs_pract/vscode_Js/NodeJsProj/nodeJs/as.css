@@ -1,0 +1,64 @@
+
+*{
+    margin:0px;
+}
+
+.Mai_bg{
+    height: 100vh;
+    width: 100vw;
+    color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    
+   
+    
+}
+
+
+
+.sub_bg{
+    background-color: rgb(208, 224, 63);
+    height: 50%;
+    width: 50%;
+    padding-top: 80px;
+    padding-left: 100px;
+    align-items: center;
+    overflow: auto;
+}
+
+.ino{
+    margin-bottom: 10px;
+    height: 20px;
+}
+
+.name_H{
+font-weight: 800;
+font-size: 20px;
+font-style: normal;
+color: brown;
+/* text-decoration: underline; */
+}
+
+.drop_D{
+    margin-bottom: 10px;
+    height: 35px;
+    width: 150px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.Result{
+    border: 2px red solid;
+    height: 50px;
+    width: 500px;
+    color: black;
+    font-size: 20px;
+    padding: 8px;
+    font-weight: 500;
+}
+
+.Box_extra{
+    margin-top: 10px;
+}

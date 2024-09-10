@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"  href="as.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Mai_bg">
+        <div class="sub_bg">
+      <span class="name_H">Value1 :</span>
+        <input id="InputV1" class="ino" type="number">
+               <br/>
+        <span class="name_H">Operater :</span>
+
+        <select id="op_id"   class="drop_D" onchange="selectedValue()" >
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+            <option value="modulo">%</option>
+        </select>
+
+        <br/>
+
+        <span class="name_H">Values2 :</span>
+        <input id="InputV2" class="ino" type="number">
+
+        
+        <div>
+            <button id="btn-id" onclick="Cal_Sub()">
+            Calculate
+        </button>
+        
+    <select id="formate_id"   onchange="selectedV_F()" >
+        <option value="simple">Single Answer</option>
+        <option value="larg">0 + 0 = answer</option>
+        
+    </select>
+        
+     
+    <select id="Disp_id"   onchange="selectedV_D()" >
+        <option value="Console">Console</option>
+        <option value="UI">UI</option>
+        
+    </select>
+
+          </div>
+          <p class="name_H">Result</p>
+
+          <div class="Result">
+  <p id="result_Id"></p>
+          </div>
+
+
+      <div class="Box_extra">
+        <input class="ino" type="text" id="newOperation"  placeholder="Enter new Funcion" >
+        <input class="ino" type="text" id="newOperationName" placeholder="Enter operation name">
+        <button onclick="addOperaButton()">Add Operation</button>
+    </div>
+
+
+
+
+
+
+        </div>
+
+
+        
+
+        <script src="ass_2.js"></script>
+    </div>
+</body>
+</html> 
+
+
+
+
+
+

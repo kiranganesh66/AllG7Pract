@@ -1,0 +1,54 @@
+
+.Man_cont{
+    margin: 20px;
+}
+.btn_bg{
+    width: auto ;
+    margin-bottom: 10px;
+}
+.own_btn{
+    width: 100px;
+}
+
+.Top_btn_clr_{
+    width: auto ;
+    background-color: aquamarine;
+    height: 38px;
+    width: 80px;
+    border-width: 1.5px;
+    border-radius: 5px;
+}
+.rest{
+    background-color: rgb(230, 32, 32);
+}
+.rest1{
+    background-color: rgb(228, 207, 16);
+}
+.text_a {
+    overflow: auto;
+    height: 200px;
+    margin-top: 10px;
+    width: 500px;
+    border-style: solid ;
+    border-color: black;
+    border-width: 1px;
+}
+
+.console_a{
+    overflow: auto;
+
+    height: 200px;
+    margin-top: 10px;
+    width: 500px;
+    border-style: solid ;
+    border-color: rgb(9, 154, 190);
+    border-width: 3px;
+}
+
+.exBtn{
+    background-color: red;
+    width: auto;
+    margin: 2px;
+    border-color: rgb(82, 190, 100);
+    border-style: solid;
+}

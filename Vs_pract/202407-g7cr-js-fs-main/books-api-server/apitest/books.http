@@ -1,0 +1,55 @@
+
+
+### get All book
+GET http://localhost:9000/api/books
+
+
+##### addnew book 
+POST http://localhost:9000/api/books
+Content-Type : application/json 
+
+{
+"title": "A Tale ",
+    "isbn": "B09FDLR46V",
+    "id": "a-tale-of-two-cities",
+    "author": " Charles Dickens",
+    "price": 150,
+    "description": "Terror.",
+    "tags": [],
+    "cover": "https://m.media-amazon.com/images/I/51HG8XU0QhL.jpg",
+    "reviews": [],
+    "rating": 4.9,
+    "authorId": "charles-dickens"
+}
+
+
+####delete 
+
+DELETE http://localhost:9000/api/books/a-tale-of-two-cities
+
+
+####getbook by Id
+GET http://localhost:9000/api/books/a-tale-of-two-cities
+
+
+
+#### update the books by the id 
+PUT http://localhost:9000/api/books/a-tale-of-two-cities
+Content-Type: application/json
+
+
+    {
+"title": "A Tale GG ",
+    "isbn": "B09FDLR46V",
+    "id": "a-tale-of-two-cities",
+    "author": " Charles",
+    "price": 15,
+    "description": "Terror.",
+    "tags": [],
+    "cover": "https://m.media-amazon.com/images/I/51HG8XU0QhL.jpg",
+    "reviews": [],
+    "rating": 4.9,
+    "authorId": "charles-dickens"
+
+}
+

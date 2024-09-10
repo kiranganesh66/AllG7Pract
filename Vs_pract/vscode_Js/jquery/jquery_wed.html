@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 >Book's Web</h1>
+
+    <h3>Few Important Links</h3>
+    <ul >
+        <li><a id="h" href="https://thelostepic.co">Link#1</a></li>
+        <li><a href="https://vivek.vnc.in">Link#2</a></li>
+        <li><a href="https://youtube.com/@vivek.epic.echoes">Link#3</a></li>
+        <li><a href="https://vivek.vnc.in/m">Link#4</a></li>
+        <li><a href="https://vivek.vnc.in/manas">Link#4</a></li>
+    </ul>
+
+    <button id="btn">Copy Links</button>
+    <button id="Replace_btn">Replace Link Texts</button>
+
+    <fieldset >
+        <legend>Link Addresses</legend>
+    <div id="url">
+
+    </div>
+
+
+    </fieldset>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+<script>
+$(document).ready(function(){
+
+ $('#btn').click(function(){
+   
+        $("a").each(function(){
+        var link_ = $(this).attr("href")
+          
+          $("#url").append(`<p> ${link_}</p>`)
+
+            });
+        
+     });
+
+$('#Replace_btn').click(function(){
+    $("a").each(function(){
+        var link_ = $(this).attr("href")
+          
+          $(this).text(` ${link_}`)
+
+            });
+        
+
+
+
+})
+
+
+   
+
+});
+  
+</script> 
+<!-- <script>
+
+    let app= (function(){
+        var summary=$("#url");
+        var urldata = $("urlneed")
+return{
+   
+
+displayCopyUrl: function(){
+                  
+
+
+                    
+                    var  currentValue = $("h").attr('href') 
+                    console.log(currentValue)
+                    summary.html(currentValue)
+                },
+
+
+}
+
+    })();
+
+// function displayCopyUrl(){
+
+// $("url").html("jjjs")
+
+
+// }
+
+
+</script> -->
+
+</body>
+</html>
